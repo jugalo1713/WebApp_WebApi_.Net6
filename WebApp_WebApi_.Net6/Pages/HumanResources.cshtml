@@ -1,0 +1,36 @@
+﻿@page
+@model WebApp_.Net6.Pages.HumanResourcesModel
+@{
+    //if (Model == null) return;
+}
+
+<div class="text-center">
+    <h1 class="display-4">Human Resources</h1>
+</div>
+
+<div>
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Temp C</th>
+                <th>Temp F</th>
+                <th>Summary</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.WeatherForecastItems)
+            {
+                <tr>
+                    <td>@item.Date</td>
+                    <td>@item.TemperatureC</td>
+                    <td>@item.TemperatureC</td>
+                    <td>@item.Summary</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <ul>
+        
+    </ul>
+</div>
