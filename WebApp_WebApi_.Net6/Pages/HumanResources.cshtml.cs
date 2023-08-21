@@ -62,7 +62,6 @@ namespace WebApp_.Net6.Pages
 
             string jwt = await resp.Content.ReadAsStringAsync();
             HttpContext.Session.SetString("access_token", jwt);
-            var test = JsonConvert.DeserializeObject<JwtToken>(jwt);
 
             return JsonConvert.DeserializeObject<JwtToken>(jwt);
         }
